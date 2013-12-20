@@ -3,5 +3,5 @@ markdown: redcarpet
 pygments: true
 timezone: Europe/Bucharest
 
-permalink: post/:title
 baseurl: /blog
+permalink: /post/:title
