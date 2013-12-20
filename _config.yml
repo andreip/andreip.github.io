@@ -1,7 +1,6 @@
-name: Andrei Nicuale Petre
+name: Andrei's place
 markdown: redcarpet
 pygments: true
 timezone: Europe/Bucharest
 
-baseurl: /blog
 permalink: /post/:title
