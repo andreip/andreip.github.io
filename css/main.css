@@ -25,9 +25,19 @@ h1, h2, h3, h4, h5, h6 {
 h1 { margin-bottom: 1em; }
 p { margin: 1em 0; }
 
-a         { color: #00a; }
-a:hover   { color: #000; }
-a:visited { color: #a0a; }
+a {
+ color: #3B95C6;
+   text-decoration: underline;
+   -moz-transition: color .2s ease-in-out;
+   -webkit-transition: color .2s ease-in-out;
+   -o-transition: color .2s ease-in-out;
+   -ms-transition: color .2s ease-in-out;
+   transition: color .2s ease-in-out;
+}
+
+a:hover {
+ color: #1B75A6 !important;
+}
 
 /*****************************************************************************/
 /*
@@ -48,6 +58,12 @@ a:visited { color: #a0a; }
   font-family: Monaco, "Courier New", monospace;
   font-size: 80%;
 }
+
+.posts li a {
+  font-size: 115%;
+  text-decoration: none;
+}
+
 
 /*****************************************************************************/
 /*
