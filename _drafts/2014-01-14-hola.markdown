@@ -1,0 +1,20 @@
+---
+layout: post
+title:  "Gmail shortcuts"
+date:   2014-01-14
+---
+
+I didn't have a mouse once for at least 5-6 hours and had to do some work which included gmail.
+You would be surprised how easy shortcuts are if you try them out.
+
+* first [enable shortcuts][gmail-enable-shortcuts]: click right top gear ->
+select *Settings*, then in *General* tab scroll a bit and select
+*Keyboard shortcuts on*.
+
+* the most common shortcuts I use are:
+
+Shift + ? - checkout the table with all shortcuts
+k - when you are viewing an email, go to the next newer email (up)
+j - when you are viewing an email, go to the next older email (down)
+
+[gmail-enable-shortcuts]: https://support.google.com/mail/answer/6594?hl=en
