@@ -1,6 +1,22 @@
-name: Andrei's place
-markdown: redcarpet
-pygments: true
+# Dependencies
+markdown:         redcarpet
+highlighter:      pygments
+
+# Permalinks
+permalink:        pretty
+#relative_permalinks: true
+
+# Setup
+title:            Andrei Petre
+url:              http://www.andreipetre.ro
+paginate:         1
+baseurl:          /
+author:
+  name:           Andrei Petre
+  url:            https://twitter.com/anpetre
+  email:          p31andrei@gmail.com
 timezone: Europe/Bucharest
 
-permalink: /post/:title
+# Custom vars
+version:          1.0.0
+github:           https://github.com/andreip
