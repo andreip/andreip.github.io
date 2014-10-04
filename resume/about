@@ -1,0 +1,28 @@
+Most proud of
+---
+
+I am most proud of being able to help the big launch of uberVU's new product in the autumn of 2012, contributing (mostly internal commits and sync'ed periodically with open sourced code) to mozaic.js[1].
+
+The main challenge was represented by the asynchronous nature of the bugs that were hard to detect and tackle. I had a lot to learn about code design and about working in small teams in an agile kind of way in order to sync the django API with the coffeescript front-end.
+
+[1]: https://github.com/ubervu/mozaic
+
+
+Online presence
+---
+
+http://www.andreipetre.ro/
+
+presentations, mentorships:
+http://py4school.rosedu.org/
+http://cdl.rosedu.org/2013-unibuc/#details_course3
+http://cdl.rosedu.org/2013/#details_course2
+
+contributions:
+https://github.com/uberVU/mozaic
+https://github.com/mihaineacsu/SyncOMatic
+https://github.com/rosedu/saltaretii
+https://github.com/andreip/ssc/commit/8b7fcaf764714c8b84df47b8788c59635084c0cc
+http://rb.freedroid.org/r/1024/
+https://github.com/aismail/vmgui
+https://github.com/aismail/AndroAR/tree/master/AndroARGUI
