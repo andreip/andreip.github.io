@@ -13,6 +13,7 @@ noindex: true
 * [Python] [Tweepy](https://github.com/tweepy/tweepy/pull/446) fixed one bug
 * [JS, grunt] [Schema inspector](https://github.com/Atinux/schema-inspector/pull/11) fixed a bower install bug
 * [ruby] [SUSE Studio CLI client](https://github.com/susestudio/ssc/pull/1) feature
+* [Android, Java] [Augmented Reality GUI](https://github.com/aismail/AndroAR)
 
 ## Open Source Personal Work
 
