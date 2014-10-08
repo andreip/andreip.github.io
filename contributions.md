@@ -20,6 +20,8 @@ noindex: true
 	* computes Twitter authoritative users based on their tweets, calcuating specific metrics and doing some Machine Learning straightforward preprocessing of the input set beforehand
 	* [paper here](https://www.dropbox.com/s/3xh7hjxewtgdswe/findingtopicalauthoritiesontwitter.pdf?dl=0)
 * [Prolog] [Created homework](https://github.com/andreip/AI-MAS) for AI-class while was in 1st undergraduate year (summer work)
+* For full list of repositories and coding style please check my github profile [<img src="/public/img/github.png">](https://github.com/andreip/)
+
 
 ## Technical Knowledge
 
