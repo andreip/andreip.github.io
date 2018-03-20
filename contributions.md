@@ -28,8 +28,8 @@ noindex: true
 
 * [C, Article] [GDB introduction](http://techblog.rosedu.org/gdb-a-basic-workflow.html)
 * [Git, Article] [Git aliases](http://techblog.rosedu.org/git-speeding-workflow.html)
-* [Flask, Presentation] [ROSEdu CDL course](http://cdl.rosedu.org/2013-unibuc/#details_course3)
-* [Git, Presentation] [ROSEdu CDL course](http://cdl.rosedu.org/2013/#details_course2)
+* [Flask, Presentation] [ROSEdu CDL course](http://cdl.rosedu.org/editions/unibuc_2013/#details_course3)
+* [Git, Presentation] [ROSEdu CDL course](http://cdl.rosedu.org/editions/spring_2013/#details_course2)
 * [Python, Teaching] Part of team for [teaching python in schools](http://py4school.rosedu.org/)
 
 ## Closed Source Contributions
