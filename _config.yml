@@ -1,21 +1,56 @@
-# Dependencies
-highlighter:      rouge
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
 
-# Permalinks
-permalink:        pretty
-#relative_permalinks: true
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+title: Andrei-Niculae Petre
+email: ""
+description: >- # this means to ignore newlines until "baseurl:"
+  Andrei-Niculae Petre's personal website and tech blog.
+  Software engineer from Bucharest, Romania, interested in open source, python,
+  linux, rock climbing and chess.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://www.andreipetre.ro" # the base hostname & protocol for your site, e.g. http://example.com
+github_username:  andreip
+linkedin_username: anpetre
 
-# Setup
-title:            Andrei Petre
-url:              http://www.andreipetre.ro
-paginate:         1
-baseurl:          /
-author:
-  name:           Andrei Petre
-  url:            https://twitter.com/anpetre
-  email:          p31andrei@gmail.com
-timezone: Europe/Bucharest
+google_analytics: "UA-46687316-1"
 
-# Custom vars
-version:          1.0.0
-github:           https://github.com/andreip
+# Build settings
+markdown: kramdown
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Exclude from processing.
+# The following items will not be processed, by default. Create a custom list
+# to override the default setting.
+# exclude:
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/
+
+permalink: pretty
+
+collections:
+  posts:
+    output: true
+    permalink: /:collection/:name
+
+header_pages:
+  - posts.html

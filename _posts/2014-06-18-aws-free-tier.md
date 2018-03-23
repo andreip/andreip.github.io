@@ -2,7 +2,7 @@
 layout: post
 title:  "About AWS Free Tier"
 date:   2014-06-18
-category: amazon
+category: tech
 ---
 
 I've recently created a [Free Tier AWS][aws-free] subscription (available for one year). This includes
@@ -41,8 +41,11 @@ Tips on using the instance
 
 7. I personally did an alias on my desktop/laptop:
 
-        $ echo "alias sshaws='ssh -i ~/.ssh/aws/my.pem ubuntu@your-ip'" >> ~/.bash_aliases
-        $ source ~/.bash_aliases
+{% highlight bash %}
+$ echo "alias sshaws='ssh -i ~/.ssh/aws/my.pem ubuntu@your-ip'" >> ~/.bash_aliases
+$ source ~/.bash_aliases
+{% endhighlight %}
+
 Now you can simply do `sshaws`. Make sure to replace with `your-ip` and the path to your `.pem`.
 
 8. You **should add** yourself some **swap**. Else you will bump into problems
@@ -57,10 +60,13 @@ installed files and saved data, you can just migrate the Root Volume from your o
 10. Set `noatime` as a parameter with which your HDD (/dev/xvda1 probably? see `df` and look for the one
 which is mounted on `/`). Check my `/etc/fstab` below. See [this tutorial][fstab] too.
 
-        ubuntu@ip-xxx:$ cat /etc/fstab
-        LABEL=cloudimg-rootfs	/	 ext4	defaults	0 0
-        /dev/xvda1 / ext4 rw,noatime,nodiratime 0 0
-        /var/swap.1 swap swap defaults 0 0
+{% highlight bash %}
+ubuntu@ip-xxx:$ cat /etc/fstab
+LABEL=cloudimg-rootfs	/	 ext4	defaults	0 0
+/dev/xvda1 / ext4 rw,noatime,nodiratime 0 0
+/var/swap.1 swap swap defaults 0 0
+{% endhighlight %}
+
 Also notice the `/var/swap.1` from [SO][swap]. You need to `$ sudo reboot` machine and reconnect via SSH
 to see changes.
 

@@ -1,0 +1,25 @@
+<footer class="site-footer h-card">
+  <div class="wrapper">
+    <!-- took parts from social.html so I could add resume in the same boat. -->
+
+    <table class="footer-links">
+      <tr>
+        <td>
+          <a href="https://github.com/{{ site.github_username| cgi_escape | escape }}"><svg class="svg-icon"><use xlink:href="{{ '/assets/minima-social-icons.svg#github' | relative_url }}"></use></svg><span class="username">{{ site.github_username| escape }}</span></a>
+        </td>
+
+        <td>
+          <a class="resume" href="{{ "/resume/resume.pdf" }}">
+            <i class="fa fa-file-text svg-icon"></i><span class="username">resume</span>
+          </a>
+        </td>
+
+        <td>
+          <a href="https://www.linkedin.com/in/{{ site.linkedin_username| cgi_escape | escape }}"><svg class="svg-icon"><use xlink:href="{{ '/assets/minima-social-icons.svg#linkedin' | relative_url }}"></use></svg><span class="username">{{ site.linkedin_username| escape }}</span></a>
+        </td>
+      </tr>
+    </table>
+
+
+  </div>
+</footer>

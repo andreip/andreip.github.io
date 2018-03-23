@@ -1,6 +1,7 @@
-*.log
-*.dvi
+_site
+.sass-cache
+.jekyll-metadata
 
 *.sw*
-
-_site/
+*.log
+*.dvi
