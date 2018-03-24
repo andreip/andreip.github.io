@@ -1,6 +1,7 @@
 %______________________________________________________________________________________________________________________
 % @brief    LaTeX2e Resume for Andrei-Niculae Petre
-\documentclass[margin,line]{resume}
+\documentclass[line, margin]{resume}
+\usepackage{nicefrac}
 
 \RequirePackage{color}
 %Setup hyperref package, and colours for links
@@ -8,101 +9,115 @@
 \definecolor{linkcolour}{rgb}{0,0.2,0.6}
 \hypersetup{colorlinks,breaklinks,urlcolor=linkcolour, linkcolor=linkcolour}
 
+% all this for a "~"
+% https://tex.stackexchange.com/questions/9363/how-does-one-insert-a-backslash-or-a-tilde-into-latex#answer-9372
+\newcommand{\bettertilde}{\raise.17ex\hbox{$\scriptstyle\mathtt{\sim}$}}
+
+
 %______________________________________________________________________________________________________________________
 \begin{document}
-\name{\Large Andrei-Niculae PETRE}
+
+\renewcommand{\namefont}{ \LARGE \bf }
+
+\name{Andrei-Niculae PETRE}
+
+\address{\href{mailto:andrei@linux.com}{andrei@linux.com}}
+\address{\href{http://andreipetre.ro}{andreipetre.ro}}
+
 \begin{resume}
 
     %__________________________________________________________________________________________________________________
     % Contact Information
-    \section{\mysidestyle Contact\\Information}
+%    \section{\mysidestyle Contact\\Information}
 
-    phone: +40 727 029 961              \\
+%    phone: +40 727 029 961              \\
 %   phone: +358 41 362 6333              \\
 %   phone: +1 650 353 13 74              \\
-    e-mail:  \href{mailto:p31andrei@gmail.com}{p31andrei@gmail.com}  \vspace{0mm}\\\vspace{-4.5mm}\\%
-    website: \href{http://andreipetre.ro}{andreipetre.ro}, github: \href{https://github.com/andreip/}{andreip}, skype: andreip31
+%    e-mail:  \href{mailto:p31andrei@gmail.com}{p31andrei@gmail.com} \vspace{0mm}\\\vspace{-4.5mm}\\%
+%    website: \href{http://andreipetre.ro}{andreipetre.ro}, github: \href{https://github.com/andreip/}{andreip}, skype: andreip31
+
+%__________________________________________________________________________________________________________________
+    % Objective
+    \section{Objective}
+
+After having worked full-stack for 5 years, I'm looking for some low level programming opportunities. In addition, I've got 1.5 years C++ experience as a TA in university and an interest in open source, python, linux, rock climbing and chess; check my website for more. I'm also a member of \href{http://rosedu.org}{ROSEdu}, an organization that promotes open-source in education.
 
     %__________________________________________________________________________________________________________________
-    % Education
-    \section{\mysidestyle Education}
+    % Professional Experience
+\section{Experience}
 
-    \textbf{MSc}, Machine Learning and Data Mining\hfill Sept 2014 - paused\\
-    \textbf{Aalto University}, Finland\\
-    School of Science
+\textbf{Developer}, \href{http://upbeatpr.com}{UpbeatPR}, San Francisco, CA\hfill Feb 2015 - present\\
+Highly targeted pitching process, enabled through our amounts of data we collected about journalists - PR without relationships.
+\begin{itemize} \itemsep -2pt  % reduce space between items
+	\item One of the first engineers at Upbeat, designed and built systems core to our business in Python, Django, Scrapy, Celery, ElasticSearch, Javascript (ES6), React, Redux and Ruby on Rails
+    \item Worked on all parts of delivering software: design, implementation, testing, deployment, continuous integration, maintenance, instrumentation and monitoring.
+	\item Worked remotely \nicefrac{2}{3} of my time at Upbeat, but, in spite of that, was able to become an asset to the team, helping my colleagues grow through well-thought and in-depth code reviews. Maintainer of our scraping system and of our data quality efforts.
+\end{itemize}\vspace{-2.5mm}
+\textbf{Selected accomplishments}
+\begin{itemize} \itemsep -2pt  % reduce space between items
+	\item Implemented an indexing system using ElasticSearch, that powered an internal search engine that our PR agents used to pitch journalists - our primary business driver. We've indexed \bettertilde16M articles in ElasticSearch.
+	\item Designed and built a cost-effective FeedPoller system that had daily volume of \bettertilde650K new urls per day from 20K feeds we had in our db. It was able to poll the feeds efficiently, each worker could handle hundreds of urls over a few seconds, doing asynchronous requests with a combination of gevent and celery. The system could easily scale horizontally.
+\end{itemize}
+
+% For my reference:
+% OOP 		- Oct 2016 - Feb 2017
+% SD  		- Mar 2016 - Jun 2017 (x2)
+% PP & SD	- Mar 2014 - Jun 2014
+% AA		- Oct 2013 - Feb 2014
+\textbf{Teaching Assistant}, POLITEHNICA University of Bucharest\hfill 2013 -- 2014, 2016 -- 2017\\
+Data Structures \& Algorithms I've thought 3 times, using C++. Also thought 3 other classes.
+%\begin{itemize} \itemsep -2pt  % reduce space between items
+%\item Data Structures \& Algorithms using C++
+%\item Object Oriented Programming using Java
+%\item Functional Programming using Scheme, Haskell, Prolog
+%\item Algorithms Complexity Analysis
+%\end{itemize}
+
+\textbf{Developer}, \href{http://devlabel.com/}{dev.Label}\hfill Aug 2014 - Jan 2015\\
+Full stack developer, used Groovy, Javascript, Coffeescript and ChromeDriver for working on \href{https://www.trade.it/}{trade.it}, a multi-broker trading application, while in its early development stage.
+
+\textbf{Developer}, \href{http://ubervu.com}{UberVU} (acquired by HootSuite, \bettertilde15M\$) \hfill Jun 2012 -- Sept 2013\\
+Social media analytics, monitoring and engaging dashboard.
+\begin{itemize} \itemsep -2pt  % reduce space between items
+	\item Started working at uberVU while still in college, and picked up best practices and new technologies I've never worked with before with tremendous speed.
+	\item First as a Frontend Engineer, working on our own \href{https://github.com/uberVU/mozaic/}{mozaic.JS} (backbone.js based) framework that enabled the new interface that would lead to the acquisition of uberVU, just 4 months after my leave
+    \item Then also working on the REST API for the JS frontend, using Django, Tastypie and mySQL
+    \item Finally, worked on the Python backend pipeline that collected and indexed data into MongoDB and ElasticSearch, as well as on our CI system and deployment scripts
+\end{itemize}
+
+%    \vspace{1.2mm}\textbf{Artificial Intelligence \& Multi-Agent Systems Lab Intern}
+%        \hfill Jun 2011 -- Sept 2011\vspace{1mm}\\
+%    {\fontsize{2.65mm}{1em}\selectfont
+%      Developed a homework for the Politehnica University AI class in Prolog while a first-year student.
+%    }
+
+
+%__________________________________________________________________________________________________________________
+    % Education
+    \section{Education}
+
+    %\textbf{MSc}, Machine Learning and Data Mining\hfill Sept 2014 - paused\\
+    %\textbf{Aalto University}, Finland\\
+    %School of Science
 
     \textbf{BSc}, Major in Engineering and Computer Science\hfill Oct 2010 - July 2014\\
     \textbf{University POLITEHNICA of Bucharest}, Romania\\
     Faculty of Automatic Control and Computer Science
-
-    %__________________________________________________________________________________________________________________
-    % Professional Experience
-    \section{\mysidestyle Professional\\Experience}
-
-    \vspace{1.2mm}\textbf{PRX.co (formerly Crowdbooster)}, San Francisco, CA
-        \hfill Feb 2015 - present\vspace{1mm}\\
-    \selectfont{Software Developer}\vspace{1.2mm}\\
-    {\fontsize{2.65mm}{1em}\selectfont
-    I've been part of a small engineering team in PRX from its very beginning. We're building the first scalable PR system, connecting our clients with journalists that cover topics similar to our clients' businesses. Some examples of things I worked on: crawling journalists and their articles, our own inbox and campaign manager, internal tools for our PR people to use, periodic workers to scrape and be polite.\vspace{1.2mm}\\
-    Using: Python, Django, Elasticsearch, postgres, scrapy, celery, AWS SQS service for workers, Redux and Node.js for our frontend for clients and our PR agents.
-    }
-
-    \vspace{1.2mm}\textbf{University POLITEHNICA of Bucharest}, Romania
-        \hfill Oct 2013 -- present\vspace{1mm}\\
-        \textbf{Associate Teaching Assistant} - {\fontsize{2.65mm}{1em}\selectfont Object Oriented Programming, Data Structures, Algorithms Analysis, Programming Paradigms.}
-
-    \vspace{1.2mm}\textbf{dev.Label}, Bucharest, Romania
-        \hfill Aug 2014 - Jan 2015\vspace{1mm}\\
-    \selectfont{Frontend \& Backend Developer}\vspace{1.2mm}\\
-    {\fontsize{2.65mm}{1em}\selectfont
-      Worked on \href{https://www.trade.it/}{trade.it}, a proxy system that facilitates usage of multiple broker systems like TD Ameritrade, Scottrade etc. Used: Groovy, Javascript, Coffeescript, ChromeDriver.
-     }
-
-    \vspace{1.2mm}\textbf{HootSuite (formerly UberVU)}, Bucharest, Romania
-        \hfill Jun 2012 -- Sept 2013\vspace{1mm}\\
-        Software Developer\vspace{1.2mm}\\
-    {\fontsize{2.65mm}{1em}\selectfont
-      I had both frontend and backend responsibilities, working with a small team in a startup agile environment, on the edge of releases. Worked everywhere across the stack.\vspace{1.2mm}\\
-      Frontend: in-house mozaic.js framekwork (pub-sub pattern), django, mysql, simple CI system and deployment scripts\vspace{1.2mm}\\
-      Backend: pipeline data acquisitions controllers, mongoDB, Elasticsearch API
-    }
-
-    \vspace{1.2mm}\textbf{Artificial Intelligence \& Multi-Agent Systems Lab Intern}
-        \hfill Jun 2011 -- Sept 2011\vspace{1mm}\\
-    {\fontsize{2.65mm}{1em}\selectfont
-      Developed a homework for the Politehnica University AI class in Prolog while a first-year student.
-    }
     %__________________________________________________________________________________________________________________
     % Computer Skills
-    \section{\mysidestyle Computer\\Skills}
+    %\section{\mysidestyle Computer\\Skills}
+\section{Skills}
 
-    Good: C, Python, C++, Java                            \\
-    Medium: Javascript, Coffeescript, nodejs  \\
-    Beginner: shell scripting, haskell, scheme, prolog                    \\
-    Linux: LPIC-1, operating systems classes (user+kernel space)
-
-   %\pagebreak
-    %__________________________________________________________________________________________________________________
-    % Other Activities
-
-    \section{\mysidestyle Interests and \\Activities}
-
-    \vspace{1.2mm}\textbf{ROSEdu} (Romanian Open Source Education)
-        \hfill active member Aug 2011 -- Sept 2014\vspace{1mm}\\
-    {\fontsize{2.65mm}{1em}\selectfont
-      ROSEdu is a community of programming and open source software enthusiasts in the educational environment. Throughout the years I've:
-      \begin{list2}
-        \item been part of team for teaching python in schools \href{http://py4school.rosedu.org/}{py4school.rosedu.org}
-        \item coordinated an open source course (CDL) for two editions \href{https://www.trade.it/}{cdl.rosedu.org}
-        \item wrote some technical articles for \href{http://techblog.rosedu.org/gdb-a-basic-workflow.html}{GDB} and for \href{http://techblog.rosedu.org/git-speeding-workflow.html}{Git}
-        \item held technical presentations for Git and Flask in CDL course
-      \end{list2}
-    }\vspace{-1mm}
-
-    Hobbies: rock climbing, swimming, hiking, running, chess.\vspace{1.2mm}\\
-    Cool things you should try: lock picking, juggling.
-
-
+\begin{tabular}[t]{@{} p{1.7in} p{3.8in} @{}}
+\bf{In Production:} & Python, Django, Flask, ElasticSearch, mongo, Scrapy, Celery\\
+    				& JS, nodeJS, React, Redux, CoffeeScript, jQuery, Backbone.js\\
+                    & Git, Bash shell scripting, Heroku, PostgreSQL, ChromeDriver\\
+                    & Groovy, Grails, Ruby on Rails\\
+\bf{In TA classes:} & C++, Java\\
+\bf{In open source course:} & C \& GObject for Anjuta, a Gnome IDE, during an open source course, \href{http://cdl.rosedu.org/}{CDL}\\
+\bf{In General:} & Go, Scheme, Haskell, Prolog\\
+\bf{Certifications:} & Linux (LPIC-1)
+\end{tabular}
 
 %______________________________________________________________________________________________________________________
 \end{resume}
@@ -111,4 +126,5 @@
 
 %______________________________________________________________________________________________________________________
 % EOF
+
 
