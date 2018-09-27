@@ -6,7 +6,7 @@ category: tech
 ---
 
 I knew for a while about a great course called [Nand 2 Tetris][nand2tetris],
-and recently I commited to doing it. It's available on coursera, follow links
+and recently I committed to doing it. It's available on coursera, follow links
 from [nand2tetris][nand2tetris] page.
 
 By the end of it, I implemented a simple computer where I built the chips
