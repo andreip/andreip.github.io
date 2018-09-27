@@ -14,7 +14,7 @@ for a CPU (with registers and ALU) and a RAM; and a bunch of abstractions on
 top: a java like programming language - Jack, operating system libraries (for
 math, for drawing pixels on the screen, for memory management etc.), a compiler,
 a virtual machine and an assembler that all worked together. Eventually I was
-able to play my own chess game which compiled down to machine code and ran on
+able to play [my own chess game][jack-chess] which compiled down to machine code and ran on
 the above mentioned CPU, just awesome!
 
 I was very enthusiastic about the course and it was super fun, I learned a lot.
@@ -23,3 +23,4 @@ I hope you do to!
 <br><br>
 
 [nand2tetris]: https://www.nand2tetris.org/
+[jack-chess]: https://github.com/andreip/jack-chess
