@@ -13,7 +13,10 @@
       </div>
     </main>
 
-    {%- include footer.html -%}
+    {% comment %} If we show disqus and we're on a post, hide footer. {% endcomment %}
+    {%- if site.disqus.shortname and page.layout != "post" -%}
+      {%- include footer.html -%}
+    {%- endif -%}
 
   </body>
 
