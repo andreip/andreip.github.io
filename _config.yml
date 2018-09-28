@@ -25,6 +25,10 @@ github_username:  andreip
 linkedin_username: anpetre
 
 google_analytics: "UA-46687316-1"
+# Adds disqus comment in every post through
+# https://github.com/jekyll/minima/blob/master/_includes/disqus_comments.html
+disqus:
+  - shortname: andrei_petre
 
 # Build settings
 markdown: kramdown

@@ -20,8 +20,6 @@ the above mentioned CPU, just awesome!
 I was very enthusiastic about the course and it was super fun, I learned a lot.
 I hope you do to!
 
-<br><br>
-
 [nand2tetris]: https://www.nand2tetris.org/
 [jack-chess]: https://github.com/andreip/jack-chess
 [hack-repo]: https://github.com/andreip/hack-compiler-os-cpu
