@@ -34,6 +34,34 @@ noindex: true
 
 ## Closed Source Contributions
 
+### [UpbeatPR](https://www.upbeatpr.com/)
+
+* was one of the first engineers to join the team to work on Upbeat's new exiting greenfield work there! Initially we focused our attention on bloggers/content creators who could potentially write about a company (our client) for a small fee and thus would benefit from this influencer's audience.
+* pivoted eventually to match journalists with our clients and so we started focusing on being up to date with what journalists write across all the publications on the web that were using english!
+* Here's a more extensive list of things I've done while with the company:
+	* a client had trouble updating his credit card info and I jumped on it to fix a client's pain point. The old code was integrating with Stripe but was now using old API and soon to go unsupported, so I took this opportunity to refactor the code with stripe's new library (stripe react elements) and I was able to:
+		* remove code on our end (less code to maintain!)
+		* fix the client's pain point and he could now both add and update their credit cards in a secure way
+	* for our scraper infrastructure, built a system that ran a subset of our unit tests by doing live http requests (so sort of like integration tests we could call them) to verify that the scraping rules we had in place continued to work on the publication websites (they could in the meantime update their website and unit tests would have still passed)
+	* feed poller system to poll feeds with several subsequent improvements:
+		* head requests with last-modified/etag headers for efficiency checking
+		* adaptive feed polling interval (poll feeds every 5m/10m/1h/1d)
+		* async requests using gevent and celery
+		* coached a colleague to built a feed finder (given a publication finds all feeds for it)
+	* did out ElasticSearch setup (before we were using various external search providers)
+		* had the idea of detecting possible hits through links in the documents we store and built that as first prototype which put us in a positive light in client's eyes!
+		* built graphs & metrics in kibana (e.g. number of articles with or without author, # of articles in crt week/month compared to past week/month, histogram of publications' articles we found etc.)
+	* had the idea of concentrating our efforts on a list of priority publications and to improve metrics on those instead which we ended up doing and striving for!
+	* the ES search system wasn't surfacing relevant journalists sometimes, and I looked into why that was:
+		* the scoring of a journlist I made it so it was the sum of the individual scores of the articles that matched the current search terms, so usually if a journalist had 19 articles and another had only 2 articles, the former would probably score higher!
+		* but it turned out that we had some duplicate articles in the database (those came to be because we used a normalized version of the url as the key of the content stored in ES)
+		* I ended up hashing the content and keeping the hash as a key on each ES document, so when a new article was ready to be indexed, I checked if the hash was equal and if it was, checked against the content and if that was equal, it was a duplicate so wouldn't index it (similar to Rabin-Karp algorithm) and that fixed the issue in a pretty neat and efficient way
+	* added an interface for our PR agents to be able to tell our system to enqueue some URLs for scraping and to even give it some hints that those articles were written by some journalist from our system
+		* this interface was used by our PR agents to fill in some important articles and authors that our system didn't have, while working on some campaigns for clients
+	* made our scraping system figure out the twitter account of the journalist that wrote the article by doing a name check with an extra hit on twitter; it was important to get as much meta-data about the journalist who wrote the article we were scraping, in order to personalize the pitching to each journalist as much as possible! Having twitter information accurate was very important in that sense and increased our numbers by about 10% of total articles we were able to link with an identity of an author. Moreover, more than 70% of our twitter info improved and became reliable now; unlike before when some twitter accounts were mis-matched against identitis from time to time, now the info was sanity-checked let's say.
+		* the scaper cached information to avoid repeated checks (similar to how you'd do memoization in a DP problem)
+	
+
 ### [TradeIT](https://www.tradingticket.com/), while working for dev.Label
 
 * [check demo](https://www.tradingticket.com/widget/examples.html)
