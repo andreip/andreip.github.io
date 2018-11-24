@@ -47,6 +47,10 @@ noindex: true
 		* head requests with last-modified/etag headers for efficiency checking
 		* adaptive feed polling interval (poll feeds every 5m/10m/1h/1d)
 		* async requests using gevent and celery
+		* ^ these all made it so that:
+			* we could now use three 2X workers, while before we were using one/two performance workers (way more expensive)
+			* decreased our spendings by 70%
+			* allowed us to double our feeds to 20K while still having no issues!
 		* coached a colleague to built a feed finder (given a publication finds all feeds for it)
 	* did out ElasticSearch setup (before we were using various external search providers)
 		* had the idea of detecting possible hits through links in the documents we store and built that as first prototype which put us in a positive light in client's eyes!
