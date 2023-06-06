@@ -40,30 +40,33 @@
     % About
     \section{About}
 
-I'm excited about low-level programming and backend-oriented opportunities. I've got 5 years Python experience as a full stack developer and 1.5 years C++ experience as a TA in university and an interest in open source, c(pp), python, linux, rock climbing and chess. Check \href{http://andreipetre.ro}{my website} for a list of open source contributions. I'm also a member of \href{http://rosedu.org}{ROSEdu}, an organization that promotes open-source in education.
+I'm excited about low-level programming and backend-oriented opportunities. I've got 4.5 years Java experience in AWS, 5 years Python experience as a full stack developer, 1.5 years C++ experience as a TA in university and an interest in open source, c(pp), python, golang, linux, rock climbing and chess. Check \href{http://andreipetre.ro}{my website} for a list of open source contributions. I'm also a member of \href{http://rosedu.org}{ROSEdu}, an organization that promotes open-source in education.
 
     %__________________________________________________________________________________________________________________
     % Professional Experience
 \section{Experience}
 
 % SDE1 - Jan 2019 - March 2021
-% SDE2 - April 2021 - present
-\textbf{Software Developer Engineer}, \href{https://aws.amazon.com/}{AWS RDS}, Bucharest, Romania\hfill March 2022 - Present\\
-\textbf{Software Developer Engineer}, \href{https://aws.amazon.com/}{AWS RDS}, Vancouver, BC\hfill Jan 2019 - Feb 2022 \\
-\href{https://aws.amazon.com/rds/}{Amazon Relational Database Service} (Amazon RDS) makes it easy to set up, operate, and scale a relational database in the cloud. It provides cost-efficient and resizable capacity while automating time-consuming administration tasks such as hardware provisioning, database setup, patching and backups. It frees you to focus on your applications so you can give them the fast performance, high availability, security and compatibility they need.
+% SDE2 - April 2021 - May 2023
+% ( SDE3 - tracking Jan 2024 )
+\textbf{SDE}, \href{https://aws.amazon.com/}{AWS RDS}, Bucharest, Romania (Remote)\hfill March 2022 - May 2023\\
+\textbf{SDE}, \href{https://aws.amazon.com/}{AWS RDS}, Vancouver, BC\hfill Jan 2019 - Feb 2022 \\
+\href{https://aws.amazon.com/rds/}{Amazon Relational Database Service} (RDS) makes it easy to set up, operate, and scale a relational database in the cloud. It provides cost-efficient and resizable capacity while automating time-consuming administration tasks such as hardware provisioning, database setup, patching and backups.
+\begin{itemize} \itemsep -2pt  % reduce space between items
+    \item Designed and delivered \href{https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_ReplicateBackups.html}{XRAB (Cross-Region Automated Backups)} - got a "Nice!" from Andy Jassy. Helped all RDS engine teams onboard XRAB, held L\&Ls / training sessions to other RDS teams and mentored a summer intern on the project.
+    \item Led a team of 3 other engineers (and got excellent feedback from them on it) to build an internal CRUD service to achieve complex search queries and requirements needed for an AWS goal release. It relied on DynamoDB and Lambda with Go.
+    \item Worked on security threat modelling for two projects: above CRUD service and \href{https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/oracle-efs-integration.html}{RDS EFS Integration for Oracle} project.
+    \item I was one of the few (1\%) component owners of our RDS backend service. % 10 / 1000
+\end{itemize}
 
-\textbf{Software Engineer}, \href{http://upbeatpr.com}{UpbeatPR} (prev. Crowdbooster), Bucharest\hfill Dec 2015 - March 2018\\
-\textbf{Software Engineer Intern}, \href{http://crowdbooster.com/}{Crowdbooster.com}, San Francisco, CA\hfill Feb 2015 - Aug 2015\\
+
+\textbf{Software Engineer}, \href{https://www.ycombinator.com/companies/upbeat}{UpbeatPR}, Bucharest, Romania (Remote)\hfill Dec 2015 - March 2018\\
+\textbf{Software Engineer Intern}, \href{https://www.ycombinator.com/companies/upbeat}{UpbeatPR}, San Francisco, CA\hfill Feb 2015 - Aug 2015\\
 Highly targeted pitching process, enabled through our amounts of data we collected about\\ journalists -- PR without relationships.
 \begin{itemize} \itemsep -2pt  % reduce space between items
-	\item One of the first engineers at Upbeat, designed and built systems core to our business in Python, Django, Scrapy, Celery, ElasticSearch, Javascript (ES6), React, Redux and Ruby on Rails
+    \item I was one of the first engineers at Upbeat, designed and built systems core to our business in Python, Django, Scrapy, Celery, ElasticSearch, Javascript (ES6), React, Redux and Ruby on Rails.
     \item Worked on all parts of delivering software: design, implementation, testing, deployment, continuous integration, maintenance, instrumentation and monitoring.
-	\item Worked remotely \nicefrac{2}{3} of my time at Upbeat, but, in spite of that, was able to become an asset to the team, helping my colleagues grow through well-thought and in-depth code reviews. Maintainer of our scraping system and of our data quality efforts.
-\end{itemize}\vspace{-2.5mm}
-\textbf{Selected accomplishments}
-\begin{itemize} \itemsep -2pt  % reduce space between items
-	\item Implemented an indexing system using ElasticSearch, that powered an internal search engine that our PR agents used to pitch journalists - our primary business driver. We've indexed \bettertilde16M articles in ElasticSearch.
-	\item Designed and built a cost-effective FeedPoller system that had daily volume of \bettertilde650K new urls per day from 20K feeds we had in our db. It was able to poll the feeds efficiently, each worker could handle hundreds of urls over a few seconds, doing asynchronous requests with a combination of gevent and celery. The system could easily scale horizontally.
+    \item Designed and implemented the data ingestion automation that powered our business. It started with a cost-effective feed poller (\bettertilde650K new urls per day from 20K scraped feeds), a site scraper and an indexing system relying on ElasticSearch (\bettertilde16M indexed articles) to provide our in-house PR agents a powerful tool for matching journalists with their area of expertise.
 \end{itemize}
 
 \textbf{Software Engineer}, \href{http://devlabel.com/}{dev.Label}\hfill Aug 2014 - Jan 2015\\
@@ -128,5 +131,3 @@ Social media analytics, monitoring and engaging dashboard.
 
 %______________________________________________________________________________________________________________________
 % EOF
-
-
