@@ -24,12 +24,6 @@ url: "https://www.andreipetre.ro" # the base hostname & protocol for your site, 
 github_username:  andreip
 linkedin_username: anpetre
 
-google_analytics: "UA-46687316-1"
-# Adds disqus comment in every post through
-# https://github.com/jekyll/minima/blob/master/_includes/disqus_comments.html
-disqus:
-  shortname: andreisplace
-
 # Build settings
 markdown: kramdown
 theme: minima
